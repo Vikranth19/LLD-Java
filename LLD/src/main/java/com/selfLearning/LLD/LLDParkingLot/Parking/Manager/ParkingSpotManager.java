@@ -20,7 +20,7 @@ public class ParkingSpotManager {
         this.id = UUID.randomUUID().toString();
     }
 
-    ParkingLot parkingLot = ParkingLot.INSTANCE;
+    ParkingLot parkingLot = ParkingLot.getInstance();
 
     public void addFloor(Floor floor) {
         parkingLot.getFloorList().add(floor);

@@ -35,7 +35,7 @@ public class Floor {
             }
         }
 
-        return ParkingLot.INSTANCE.getParkingStrategy().park(availableSlots);
+        return ParkingLot.getInstance().getParkingStrategy().park(availableSlots);
     }
 
     public SlotType mapVehicleToSlotType(VehicleType vehicleType){

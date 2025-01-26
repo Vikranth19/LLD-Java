@@ -17,7 +17,7 @@ import com.selfLearning.LLD.LLDParkingLot.Vehicle.Vehicle;
 public class Main {
 
     public static void main(String[] args){
-        ParkingLot parkingLot = ParkingLot.INSTANCE;
+        ParkingLot parkingLot = ParkingLot.getInstance();
 
         ParkingSpotManager manager = new ParkingSpotManager();
 

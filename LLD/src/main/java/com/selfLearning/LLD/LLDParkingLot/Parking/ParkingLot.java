@@ -21,13 +21,17 @@ public class ParkingLot {
     private List<ExitGate> exitGates;
     private ParkingStrategy parkingStrategy;
 
-    public static ParkingLot INSTANCE = new ParkingLot();
+    private static final ParkingLot INSTANCE = new ParkingLot();
 
-    ParkingLot() {
+    private ParkingLot() {
         id = UUID.randomUUID().toString();
         floorList = new ArrayList<>();
         entranceGates = new ArrayList<>();
         exitGates = new ArrayList<>();
+    }
+
+    public static ParkingLot getInstance(){
+        return INSTANCE;
     }
 
     public boolean isParkingSlotAvailable(VehicleType type){

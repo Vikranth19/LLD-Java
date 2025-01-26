@@ -17,12 +17,12 @@ public class EntranceGate {
     }
 
     public Ticket generateTicket(Vehicle vehicle){
-        if(!ParkingLot.INSTANCE.isParkingSlotAvailable(vehicle.getVehicleType())){
+        if(!ParkingLot.getInstance().isParkingSlotAvailable(vehicle.getVehicleType())){
             System.out.println("Parking is full");
             return null;
         }
 
-        ParkingSlot slot =  ParkingLot.INSTANCE.getParkingSlot(vehicle.getVehicleType());
+        ParkingSlot slot =  ParkingLot.getInstance().getParkingSlot(vehicle.getVehicleType());
 
         return new Ticket(vehicle, slot);
     }
